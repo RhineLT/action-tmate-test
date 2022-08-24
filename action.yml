@@ -1,0 +1,37 @@
+name: 'Debugging with tmate'
+description: 'Debug your GitHub Actions Environment interactively by using SSH or a Web shell'
+branding:
+  icon: terminal
+author: 'Max Schmitt'
+runs:
+  using: 'node12'
+  main: 'lib/index.js'
+inputs:
+  sudo:
+    description: 'If apt should be executed with sudo or without'
+    required: false
+    default: 'true'
+  install-dependencies:
+    description: 'Whether or not to install dependencies for tmate on linux (openssh-client, xz-utils)'
+    required: false
+    default: 'true'
+  limit-access-to-actor:
+    description: 'If only the public SSH keys of the user triggering the workflow should be authorized'
+    required: false
+    default: 'false'
+  tmate-server-host:
+    description: 'The hostname for your tmate server (e.g. ssh.example.org)'
+    required: false
+    default: ''
+  tmate-server-port:
+    description: 'The port for your tmate server (e.g. 2222)'
+    required: false
+    default: ''
+  tmate-server-rsa-fingerprint:
+    description: 'The RSA fingerprint for your tmate server'
+    required: false
+    default: ''
+  tmate-server-ed25519-fingerprint:
+    description: 'The ed25519 fingerprint for your tmate server'
+    required: false
+    default: ''
