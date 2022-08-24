@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Setup tmate session
-    - uses: RhineLT/action-tmate-test@main
+    - uses: RhineLT/action-tmate-test
