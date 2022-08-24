@@ -1,0 +1,10 @@
+name: CI
+on:
+  watch:
+    types: started
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup tmate session
+    - uses: RhineLT/action-tmate-test@main
