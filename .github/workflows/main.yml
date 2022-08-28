@@ -9,3 +9,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setup tmate session
       uses: RhineLT/action-tmate-test@main
+    - name: Upload Published Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Temp
+        path: | 
+          ${{ env.GITHUB_WORKSPACE }}\temp
